@@ -57,11 +57,23 @@ $(document).on('ready', function() {
 
 //PROBLEM 5
 // Define a function called removeCharacter that takes a string and a single character (string or integer) as arguments and returns the string with the characters removed. Do not modify the original string. STRETCH: Write a test case for this last requirement.
-function removeCharacter (str, removeChar) {
-    var strCopy = str.replace(removeChar,"");
-    return strCopy;
-}
+// function removeCharacter (str, removeChar) {
+//     var strCopy = str.replace(removeChar,"");
+//     return strCopy;
+// }
 
-console.log(removeCharacter("testing", "e"));
+// console.log(removeCharacter("testing", "e"));
+
+//PROBLEM 6
+// Define a function called ouputObject that takes an object as an argument and returns each key-value pair in the following format 'key .
+var ages = {john: 10, jerry: 11, jenny: 12 };
+
+function ouputObject (object) {
+  var objectKeysArray = Object.keys(ages);
+  return Object.keys(object)[0] + " is " + object.john +", " +
+  Object.keys(object)[1] + " is " + object.jerry + ", " +
+  Object.keys(object)[2] + " is " + object.jenny;
+}
+console.log(ouputObject(ages));
 
 });
