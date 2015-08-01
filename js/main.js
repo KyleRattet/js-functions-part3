@@ -20,17 +20,29 @@ $(document).on('ready', function() {
 
 //PROBLEM 2
 // Define a function called getTotalLetters that takes an array of strings as an argument and returns the total number of letters in all strings.
-var stringArray = ['javascript', 'is', 'not', 'python'];
+// var stringArray = ['javascript', 'is', 'not', 'python'];
 
-function getTotalLetters(stringArray) {
-  var totalLength = 0;
-  for (var i = 0; i < stringArray.length; i++) {
-    totalLength += stringArray[i].length;
-  }
-  return totalLength;
+// function getTotalLetters(stringArray) {
+//   var totalLength = 0;
+//   for (var i = 0; i < stringArray.length; i++) {
+//     totalLength += stringArray[i].length;
+//   }
+//   return totalLength;
+// }
+
+// console.log(getTotalLetters(stringArray));
+
+//PROBLEM 3
+// Define a function called 'createObject' that takes two arguments and returns a new object with a key of the first argument and the value of the second argument.
+function createObject (keyName, valueName) {
+  var object = [];
+  object.push({key: keyName,
+               value: valueName
+              });
+  return object;
 }
 
-console.log(getTotalLetters(stringArray));
+console.log(createObject('city', 'Boulder'));
 
 
 });
