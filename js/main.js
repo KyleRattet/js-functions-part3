@@ -46,13 +46,22 @@ $(document).on('ready', function() {
 
 //PROBLEM 4
 // Define a function called getNegativeIndex that takes an array and a negative number as arguments and returns the value from the array at the given negative index.
-var letterArray = ['a', 'b', 'c', 'd', 'e'];
-function getNegativeIndex (arr, negNum) {
-  //translate negative number to positive number, and subtract 1 to get correct index
-  var numIndex = ((negNum*(-1))-1);
-  return arr[numIndex];
+// var letterArray = ['a', 'b', 'c', 'd', 'e'];
+// function getNegativeIndex (arr, negNum) {
+//   //translate negative number to positive number, and subtract 1 to get correct index
+//   var numIndex = ((negNum*(-1))-1);
+//   return arr[numIndex];
+// }
+
+// console.log(getNegativeIndex(letterArray,-3));
+
+//PROBLEM 5
+// Define a function called removeCharacter that takes a string and a single character (string or integer) as arguments and returns the string with the characters removed. Do not modify the original string. STRETCH: Write a test case for this last requirement.
+function removeCharacter (str, removeChar) {
+    var strCopy = str.replace(removeChar,"");
+    return strCopy;
 }
 
-console.log(getNegativeIndex(letterArray,-3));
+console.log(removeCharacter("testing", "e"));
 
 });
