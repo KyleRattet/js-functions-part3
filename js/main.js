@@ -34,15 +34,25 @@ $(document).on('ready', function() {
 
 //PROBLEM 3
 // Define a function called 'createObject' that takes two arguments and returns a new object with a key of the first argument and the value of the second argument.
-function createObject (keyName, valueName) {
-  var object = [];
-  object.push({key: keyName,
-               value: valueName
-              });
-  return object;
+// function createObject (keyName, valueName) {
+//   var object = [];
+//   object.push({key: keyName,
+//                value: valueName
+//               });
+//   return object;
+// }
+
+// console.log(createObject('city', 'Boulder'));
+
+//PROBLEM 4
+// Define a function called getNegativeIndex that takes an array and a negative number as arguments and returns the value from the array at the given negative index.
+var letterArray = ['a', 'b', 'c', 'd', 'e'];
+function getNegativeIndex (arr, negNum) {
+  //translate negative number to positive number, and subtract 1 to get correct index
+  var numIndex = ((negNum*(-1))-1);
+  return arr[numIndex];
 }
 
-console.log(createObject('city', 'Boulder'));
-
+console.log(getNegativeIndex(letterArray,-3));
 
 });
