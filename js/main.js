@@ -66,14 +66,36 @@ $(document).on('ready', function() {
 
 //PROBLEM 6
 // Define a function called ouputObject that takes an object as an argument and returns each key-value pair in the following format 'key .
-var ages = {john: 10, jerry: 11, jenny: 12 };
+// var ages = {john: 10, jerry: 11, jenny: 12 };
 
-function ouputObject (object) {
-  var objectKeysArray = Object.keys(ages);
-  return Object.keys(object)[0] + " is " + object.john +", " +
-  Object.keys(object)[1] + " is " + object.jerry + ", " +
-  Object.keys(object)[2] + " is " + object.jenny;
+// function ouputObject (object) {
+//   var objectKeysArray = Object.keys(ages);
+//   return Object.keys(object)[0] + " is " + object.john +", " +
+//   Object.keys(object)[1] + " is " + object.jerry + ", " +
+//   Object.keys(object)[2] + " is " + object.jenny;
+// }
+// console.log(ouputObject(ages));
+
+// PROBLEM 7
+// Define a function called getVowels that takes a string as an argument and returns an array of all the vowels in the string. Do not include duplicates.
+
+function getVowels (str) {
+  var vowels = ["a", "e", "i", "o", "u"];
+  var vowelArr = [];
+  var strArray = str.split("");
+
+  for (var i = 0; i < strArray.length; i++) {
+    for (var j = 0; j < vowels.length; j++) {
+      if (strArray[i] === vowels[j]) {
+        vowelArr.push(strArray[i]);
+        vowels.splice(j,1);
+      }
+    }
+
+  } return vowelArr;
+
 }
-console.log(ouputObject(ages));
+
+console.log(getVowels("javascripting"));
 
 });
