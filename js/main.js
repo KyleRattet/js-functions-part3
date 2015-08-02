@@ -13,8 +13,8 @@ $(document).on('ready', function() {
 // Define a function called getStudentName that takes a single object as an argument and returns the value of the name property/key.
 // var name = {name: 'Michael', age: 27 }
 
-// function getStudentName (name) {
-//    return name.name;
+// function getStudentName (test) {
+//    return test.name;
 //  }
 // console.log(getStudentName(name));
 
@@ -79,23 +79,71 @@ $(document).on('ready', function() {
 // PROBLEM 7
 // Define a function called getVowels that takes a string as an argument and returns an array of all the vowels in the string. Do not include duplicates.
 
-function getVowels (str) {
-  var vowels = ["a", "e", "i", "o", "u"];
-  var vowelArr = [];
-  var strArray = str.split("");
+// function getVowels (str) {
+//   var vowels = ["a", "e", "i", "o", "u"];
+//   var vowelArr = [];
+//   var strArray = str.split("");
 
-  for (var i = 0; i < strArray.length; i++) {
-    for (var j = 0; j < vowels.length; j++) {
-      if (strArray[i] === vowels[j]) {
-        vowelArr.push(strArray[i]);
-        vowels.splice(j,1);
-      }
-    }
+//   for (var i = 0; i < strArray.length; i++) {
+//     for (var j = 0; j < vowels.length; j++) {
+//       if (strArray[i] === vowels[j]) {
+//         vowelArr.push(strArray[i]);
+//         vowels.splice(j,1);
+//       }
+//     }
 
-  } return vowelArr;
+//   } return vowelArr;
 
+// }
+
+// console.log(getVowels("javascripting"));
+
+//PROBLEM 8 -- not complete, need to revisit
+// Define a function called captureTwins that takes an array as an argument and returns true if every adjacent pair of items in the array is the same, otherwise return false.
+
+var testTrueArr = ['m', 'm', 'n', 'n', 's', 's'];
+var testFalseArr = ['m', 'm', 'm', 'n', 's', 's'];
+
+function captureTwins (arr) {
+  //splice array into pairs
+  var numPairs = arr.length/2;
+  var pairsArr = [];
+  for (var i = 0; i < numPairs; i++) {
+    pairsArr.push(arr.splice(0,2));
+    debugger;
+  }
+  return pairsArr;
+//compare pair index values
+
+  // for (var i = 0; i < numPairs; i++) {
+  //  if(pairsArr[i][0] === pairsArr[i][1]) {
+  //   return true;
+  //  }
+  // }
 }
 
-console.log(getVowels("javascripting"));
+
+// console.log(captureTwins(testTrueArr));
+
+
+//PROBLEM 9 -- not complete,  need to revisit
+// Define a function called testBooleanLogic that takes an array of boolean values and returns true if any value is true.
+//indexOf() to check for values of each index
+var testTrueArr = [false, true, false, false];
+var testFalseArr = [false, false, false];
+
+function testBooleanLogic (arr) {
+ if (arr.length === 0) {
+  return false;
+ } else {
+   if(arr.indexOf(true) >= 0) {
+    return true;
+   } else {
+    return false;
+   }
+ }
+
+}
+console.log(testBooleanLogic(testTrueArr));
 
 });
