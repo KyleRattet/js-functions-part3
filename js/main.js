@@ -98,52 +98,69 @@ $(document).on('ready', function() {
 
 // console.log(getVowels("javascripting"));
 
-//PROBLEM 8 -- not complete, need to revisit
+//PROBLEM 8
 // Define a function called captureTwins that takes an array as an argument and returns true if every adjacent pair of items in the array is the same, otherwise return false.
 
-var testTrueArr = ['m', 'm', 'n', 'n', 's', 's'];
-var testFalseArr = ['m', 'm', 'm', 'n', 's', 's'];
+// var testTrueArr = ['m', 'm', 'n', 'n', 's', 's'];
+// var testFalseArr = ['m', 'm', 'm', 'n', 's', 's'];
 
-function captureTwins (arr) {
-  //splice array into pairs
-  var numPairs = arr.length/2;
-  var pairsArr = [];
-  for (var i = 0; i < numPairs; i++) {
-    pairsArr.push(arr.splice(0,2));
-    debugger;
-  }
-  return pairsArr;
-//compare pair index values
+// function captureTwins (arr) {
+//   //test to see if arr is evenly paired
+//   if (arr.length % 2 !== 0) {
+//     return false;
+//   } else {
+//     while(arr.length > 0) {
+//       var element = arr.shift();
+//       if (element !== arr[0]) {
+//         return false;
+//       }
+//       arr.shift();
+//     }
+//     return true;
+//   }
+// }
 
-  // for (var i = 0; i < numPairs; i++) {
-  //  if(pairsArr[i][0] === pairsArr[i][1]) {
-  //   return true;
-  //  }
-  // }
-}
-
+// console.log(captureTwins(testFalseArr));
 
 // console.log(captureTwins(testTrueArr));
 
 
-//PROBLEM 9 -- not complete,  need to revisit
+//PROBLEM 9
 // Define a function called testBooleanLogic that takes an array of boolean values and returns true if any value is true.
 //indexOf() to check for values of each index
-var testTrueArr = [false, true, false, false];
-var testFalseArr = [false, false, false];
+// var testTrueArr = [false, true, false, false];
+// var testFalseArr = [false, false, false];
 
-function testBooleanLogic (arr) {
- if (arr.length === 0) {
-  return false;
- } else {
-   if(arr.indexOf(true) >= 0) {
-    return true;
-   } else {
-    return false;
-   }
- }
+// function testBooleanLogic (arr) {
+//  if (arr.length === 0) {
+//   return false;
+//  } else {
+//    if(arr.indexOf(true) >= 0) {
+//     return true;
+//    } else {
+//     return false;
+//    }
+//  }
 
+// }
+// console.log(testBooleanLogic(testFalseArr));
+
+//PROBLEM 10
+// Define a function called getUniqueValues that takes an array of strings, and returns a new array consisting of the unique values.
+var testArr = ["m", "n", "m", "r", "s", "r", "q", "q"];
+
+function getUniqueValues(arr) {
+  //create empty array container
+  var uniqueArray = [];
+  //for each (loop characteristics)
+  arr.forEach(function(item) {
+    if(uniqueArray.indexOf(item) === -1) {
+      uniqueArray.push(item);
+    }
+  });
+  return uniqueArray;
 }
-console.log(testBooleanLogic(testTrueArr));
+
+console.log(getUniqueValues(testArr));
 
 });
